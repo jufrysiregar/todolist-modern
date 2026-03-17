@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Peppermint Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex items-center justify-center">
+    <div class="clipboard-container">
+        <div class="clipboard-top">
+            <div class="clipboard-clip"></div>
+        </div>
+        <div class="clipboard-paper p-8 flex flex-col relative">
+            <div id="mainHeader">
+                <div class="flex justify-between items-center mb-1 relative pb-4">
+                    <div class="w-10"></div>
+                    <div class="header-wrapper flex-1 text-center">
+                        <h1 class="vintage-font">To Do List Modern</h1>
+                    </div>
+                    <div class="glow-wrapper">
+                        <button onclick="openGroupModal()" class="btn-add-paper neon-glow"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="title-underline-full"></div>
+                </div>
+            </div>
+            <div id="subHeader" class="hidden mb-4">
+                <div class="flex items-center justify-between relative pb-4">
+                    <div class="header-wrapper flex-1">
+                        <h2 id="currentGroupName" class="vintage-font text-xl"></h2>
+                    </div>
+                    <div class="glow-wrapper">
+                        <button onclick="addNewItemRow()" class="btn-add-paper-small neon-glow"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="title-underline-full"></div>
+                </div>
+            </div>
+            <div id="todoContainer" class="flex-1 overflow-y-auto custom-scrollbar-v2 mt-6 flex flex-col"></div>
+            <div id="mainFooter" class="flex justify-center mt-4">
+                <button onclick="deleteAllGroups()" class="btn-clean-text">Hapus Semua Kegiatan ⚠️</button>
+            </div>
+            <button id="backBtn" onclick="backToMain()" class="hidden absolute bottom-6 right-8 text-black opacity-40 hover:opacity-100 transition-opacity">
+                <i class="fa-solid fa-arrow-left text-2xl"></i>
+            </button>
+        </div>
+    </div>
+    <div id="modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-md hidden flex items-center justify-center p-4 z-50">
+        <div class="glass-modal-light w-full max-w-[360px] p-8 text-center relative overflow-hidden">
+            <div class="animated-border"></div>
+            <h2 class="vintage-font text-slate-800 text-lg mb-6 tracking-wide relative z-10">To Do List</h2>
+            <div class="mb-8 relative z-10">
+                <div class="input-wrapper">
+                    <input type="text" id="groupInput" placeholder="Apa rencana hari ini?" class="modern-input-light italic-placeholder">
+                </div>
+            </div>
+            <div class="flex justify-center items-center gap-4 relative z-10">
+                <button onclick="closeModal()" class="btn-grad-rose">BATAL</button>
+                <button onclick="saveGroup()" class="btn-grad-sky">SIMPAN</button>
+            </div>
+        </div>
+    </div>
+    <div id="customAlert" class="fixed inset-0 bg-slate-900/40 backdrop-blur-md hidden flex items-center justify-center z-[60] p-4 text-center">
+        <div class="glass-modal-light w-full max-w-[350px] p-8">
+            <p class="text-slate-800 font-bold mb-8 text-sm">Kamu serius ingin menghapus kegiatan ini?</p>
+            <div class="flex justify-center items-center gap-6">
+                <button id="cancelDelete" class="btn-grad-sky">BATAL</button>
+                <button id="confirmDelete" class="btn-grad-rose">HAPUS</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
