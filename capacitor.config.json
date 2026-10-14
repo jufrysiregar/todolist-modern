@@ -14,15 +14,15 @@
     "Preferences": {
       "group": "TodoListModern"
     },
-    "SplashScreen": {
-      "launchShowDuration": 0,
-      "launchAutoHide": true,
-      "backgroundColor": "#0ea5e9",
-      "showSpinner": false,
-      "androidSplashResourceName": "splash",
-      "androidScaleType": "CENTER_CROP",
-      "splashFullScreen": true,
-      "splashImmersive": true
-    }
+  "SplashScreen": {
+   "launchShowDuration": 1,
+   "launchAutoHide": true,
+   "backgroundColor": "#0ea5e9",
+   "androidSplashResourceName": "splash",
+   "androidScaleType": "CENTER_CROP",
+   "showSpinner": false,
+   "splashFullScreen": false,
+   "splashImmersive": false
+}
   }
 }
