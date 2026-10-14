@@ -33,14 +33,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # ── 5. Capacitor add + sync ───────────────────────────────────────────
+      # ── 5. Capacitor add + generate icon + sync ───────────────────────────
       - name: Add Capacitor Android
         run: npx cap add android
+
+      - name: Generate icons from assets
+        run: npx @capacitor/assets generate --android
+        continue-on-error: true
 
       - name: Capacitor sync
         run: npx cap sync android
 
-      # ── 6. Accept SDK licenses (pre-installed di ubuntu-latest) ──────────
+      # ── 6. Accept SDK licenses ────────────────────────────────────────────
       - name: Accept Android SDK licenses
         run: yes | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager --licenses || true
 

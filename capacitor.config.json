@@ -1,7 +1,7 @@
 {
   "appId": "com.todolistmodern.app",
   "appName": "TodoList Modern",
-  "webDir": "www",
+  "webDir": ".",
   "bundledWebRuntime": false,
   "android": {
     "minWebViewVersion": 55,
@@ -13,6 +13,16 @@
   "plugins": {
     "Preferences": {
       "group": "TodoListModern"
+    },
+    "SplashScreen": {
+      "launchShowDuration": 0,
+      "launchAutoHide": true,
+      "backgroundColor": "#0ea5e9",
+      "showSpinner": false,
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "splashFullScreen": true,
+      "splashImmersive": true
     }
   }
 }
