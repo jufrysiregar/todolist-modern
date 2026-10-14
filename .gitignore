@@ -1,0 +1,33 @@
+# Capacitor Android — folder ini di-generate, tidak perlu di-commit
+android/
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Keystore — JANGAN commit ke repo publik
+*.keystore
+*.jks
+keystore.properties
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Env secrets
+.env
+.env.local
+.env.*
+
+# GitHub Actions cache
+.gradle/
