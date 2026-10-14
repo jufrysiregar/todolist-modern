@@ -1,0 +1,22 @@
+{
+  "name": "todolist-modern",
+  "version": "1.0.0",
+  "description": "TodoList Modern - Android app via Capacitor",
+  "private": true,
+  "scripts": {
+    "cap:add:android": "npx cap add android",
+    "cap:sync": "npx cap sync android",
+    "cap:copy": "npx cap copy android",
+    "cap:open": "npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "6.1.2",
+    "@capacitor/app": "6.0.2",
+    "@capacitor/core": "6.1.2",
+    "@capacitor/preferences": "6.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "3.0.5",
+    "@capacitor/cli": "6.1.2"
+  }
+}
