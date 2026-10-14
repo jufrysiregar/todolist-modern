@@ -1,7 +1,7 @@
 {
   "appId": "com.todolistmodern.app",
   "appName": "TodoList Modern",
-  "webDir": ".",
+  "webDir": "www",
   "bundledWebRuntime": false,
   "android": {
     "minWebViewVersion": 55,
